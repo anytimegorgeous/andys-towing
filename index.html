@@ -70,12 +70,14 @@ body{
   color:var(--white);
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 img{width:100%;height:auto;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:2px}
 
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.hero .wrap>*,.shops .wrap>*,.area .wrap>*{min-width:0}
 .mono{font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase}
 .jp{font-family:'Noto Sans JP',sans-serif;font-weight:500}
 .display{font-family:'Chakra Petch',sans-serif;font-weight:700;line-height:1.04;text-transform:uppercase;letter-spacing:.015em}
@@ -105,6 +107,7 @@ header.show{transform:translateY(0)}
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   font-family:'Chakra Petch',sans-serif;font-weight:700;text-transform:uppercase;
   letter-spacing:.04em;text-decoration:none;border:none;cursor:pointer;border-radius:5px;
+  max-width:100%;
 }
 .btn-phone{
   background:var(--yellow);color:#000;-webkit-text-fill-color:#000;
@@ -221,7 +224,7 @@ section{padding:80px 0}
   content:"";flex:0 0 18px;height:18px;margin-top:5px;border-radius:3px;background:var(--yellow);
   clip-path:polygon(14% 44%,0 60%,40% 100%,100% 16%,84% 2%,40% 70%);
 }
-.shops .btn-phone{margin-top:30px;font-size:1.15rem}
+.shops .btn-phone{margin-top:30px;font-size:1.15rem;white-space:normal;text-align:center;line-height:1.35}
 @media(max-width:920px){.shops .wrap{grid-template-columns:1fr;gap:40px}}
 
 /* roadside — red alert strip */
